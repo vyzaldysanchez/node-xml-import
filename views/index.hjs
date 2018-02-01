@@ -7,5 +7,14 @@
   <body>
     <h1>{{ title }}</h1>
     <p>Welcome to {{ title }}</p>
+
+    <form action="/upload-xml" method="post" enctype="multipart/form-data">
+      <label for="xml-file">Place your file here!</label><br />
+      <input type="file" name="xml-file" id="xml-file"/>
+
+      <br />
+
+      <button type="submit">Upload</button>
+    </form>
   </body>
 </html>
