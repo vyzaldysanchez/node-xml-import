@@ -21,12 +21,8 @@ router.post('/upload-xml', (req, res, next) => {
       return next(err);
     }
 
-    console.log(JSON.stringify(students.students, null, 2));
-
     const data = students.students.map((row) => {
       const { name, lastName, cardId, career, financialRequest } = row.student[0];
-
-      console.log(row.student);
 
       return { 
         fullName: `${name[0]} ${lastName[0]}`,
